@@ -595,7 +595,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1372845351}
+<<<<<<< Updated upstream
         m_MethodName: Exit
+=======
+        m_MethodName: OnExitClick
+>>>>>>> Stashed changes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -924,7 +928,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1372845351}
+<<<<<<< Updated upstream
         m_MethodName: Play
+=======
+        m_MethodName: OnPlayClick
+>>>>>>> Stashed changes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1053,7 +1061,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1372845351}
+<<<<<<< Updated upstream
         m_MethodName: Creators
+=======
+        m_MethodName: OnCreatorsClick
+>>>>>>> Stashed changes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
