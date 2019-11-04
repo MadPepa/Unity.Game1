@@ -5,7 +5,7 @@ public class CoinCollector : MonoBehaviour
 {
     [SerializeField] private Text _coinCounter;
     [SerializeField] private int _coinCount = 0;
-    const int _coinLayer = 11;
+    [SerializeField] int _coinLayer;
 
     private void Start()
     {

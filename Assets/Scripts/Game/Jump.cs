@@ -3,10 +3,10 @@
 [RequireComponent(typeof(GroundChecker))]
 public class Jump : MonoBehaviour
 {
+    private GroundChecker _jumpChecker;
     private Rigidbody2D _ball;
     private float _jumpForce = 8;
 
-    private GroundChecker _jumpChecker;
     private void Start()
     {
         _ball = GetComponent<Rigidbody2D>();

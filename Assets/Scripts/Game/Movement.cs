@@ -2,6 +2,8 @@
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private int _end;
+
     private float _speed = 2.5f;
 
     private void Start()
@@ -11,12 +13,12 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector2(transform.position.x - _speed * Time.deltaTime, transform.position.y);
+        transform.Translate(Vector3.left * _speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 12)
+        if (collision.gameObject.layer == _end)
             Destroy(collision.gameObject);
     }
 }

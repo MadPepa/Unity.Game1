@@ -4,39 +4,36 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _obstacle;
     [SerializeField] private GameObject _coin;
-    [SerializeField] private float _coinSpawnTime;
-    [SerializeField] private float _obstacleSpawnTime;
+    [SerializeField] private float _obstacleCooldown;
 
-    private System.Random _random = new System.Random();
     private float _spawnDistance = 1;
-    private float _coinTimer;
-    private float _obstacleTimer;
+    private float _timer;
+    private int _coinCount;
 
     private void Start()
     {
-        _coinTimer = _coinSpawnTime * (float)_random.NextDouble();
-        _obstacleTimer = _obstacleSpawnTime * (float)_random.NextDouble();
+        _timer = _obstacleCooldown * Random.value;
     }
 
     private void Update()
     {
-        _coinTimer += Time.deltaTime;
-        _obstacleTimer += Time.deltaTime;
+        _timer += Time.deltaTime;
 
-        if (_obstacleTimer >= _obstacleSpawnTime + _random.NextDouble())
+        if (_timer >= _obstacleCooldown + Random.value)
         {
-            _obstacleTimer = 0;
+            _timer = 0;
+            
+            if (Random.Range(0,3) < 2)
+            {
+                Instantiate(_obstacle, transform.position, new Quaternion());
+            }
+            else
+            {
+                _coinCount = Random.Range(3, 6);
 
-            Instantiate(_obstacle, transform.position, new Quaternion());
-        }
-
-        if (_coinTimer >= _coinSpawnTime + _random.NextDouble())
-        {
-            _coinTimer = 0;
-
-            int count = _random.Next(1, 6);
-            for (int i = 0; i < count; i++)
-                Instantiate(_coin, new Vector3(transform.position.x + _spawnDistance * i, transform.position.y + 2 + i * 0.4f), new Quaternion());
+                for (int i = 0; i < _coinCount; i++)
+                    Instantiate(_coin, new Vector3(transform.position.x + _spawnDistance * i, transform.position.y), new Quaternion());
+            }
         }
     }
 }

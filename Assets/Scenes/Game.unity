@@ -652,8 +652,7 @@ MonoBehaviour:
   _obstacle: {fileID: 8186628423482697303, guid: ae6f9cb1179bbb5478ec3d4e813255e4,
     type: 3}
   _coin: {fileID: 1334120645047763446, guid: b0cd91dc335f6c7428db46c8c3bacf1c, type: 3}
-  _coinSpawnTime: 5
-  _obstacleSpawnTime: 2
+  _obstacleCooldown: 2
 --- !u!1 &1713216898
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +908,10 @@ PrefabInstance:
       propertyPath: _coinCounter
       value: 
       objectReference: {fileID: 2133218184}
+    - target: {fileID: 930996090, guid: 380896408ab3d9942b45316ccbfb40d0, type: 3}
+      propertyPath: _coinLayer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 380896408ab3d9942b45316ccbfb40d0, type: 3}
