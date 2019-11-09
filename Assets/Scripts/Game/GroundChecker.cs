@@ -3,11 +3,11 @@
 public class GroundChecker : MonoBehaviour
 {
     [SerializeField] private float _radius;
-    [SerializeField] private GameObject _jumpPoint;
-    [SerializeField] private LayerMask _jumpLayer;
+    [SerializeField] private Transform _point;
+    [SerializeField] private LayerMask _layer;
 
-    internal bool CanJump()
+    public bool CanJump()
     {
-        return Physics2D.OverlapCircle(_jumpPoint.transform.position, _radius, _jumpLayer);
+        return Physics2D.OverlapCircle(_point.position, _radius, _layer);
     }
 }

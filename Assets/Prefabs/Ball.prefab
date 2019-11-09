@@ -132,10 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 0.7
-  _jumpPoint: {fileID: 8942326257338927134}
-  _jumpLayer:
+  _point: {fileID: 8942326257338927135}
+  _layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
 --- !u!114 &930996090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinCounter: {fileID: 0}
+  _coinCount: 0
+  _coinLayer: 11
 --- !u!58 &1372145234089618786
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class ObjectMover : MonoBehaviour
 {
     [SerializeField] private int _end;
 
@@ -14,11 +14,5 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == _end)
-            Destroy(collision.gameObject);
     }
 }

@@ -826,14 +826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Radius
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4862263263832129762, guid: 380896408ab3d9942b45316ccbfb40d0,
         type: 3}
       propertyPath: m_Name
@@ -894,24 +886,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8942326257741864740, guid: 380896408ab3d9942b45316ccbfb40d0,
-        type: 3}
-      propertyPath: _radius
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8942326257741864740, guid: 380896408ab3d9942b45316ccbfb40d0,
-        type: 3}
-      propertyPath: _jumpLayer.m_Bits
-      value: 8448
-      objectReference: {fileID: 0}
     - target: {fileID: 930996090, guid: 380896408ab3d9942b45316ccbfb40d0, type: 3}
       propertyPath: _coinCounter
       value: 
       objectReference: {fileID: 2133218184}
-    - target: {fileID: 930996090, guid: 380896408ab3d9942b45316ccbfb40d0, type: 3}
-      propertyPath: _coinLayer
-      value: 11
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380896408ab3d9942b45316ccbfb40d0, type: 3}
